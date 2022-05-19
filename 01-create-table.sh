@@ -1,0 +1,6 @@
+sqlplus myuser/mypassword@//localhost:1521/XE <<- EOF
+DROP TABLE IF EXISTS ORDERS PURGE;
+CREATE TABLE ORDERS (
+  ORDERID       VARCHAR2(10)    NOT NULL,
+  ITEMID        VARCHAR2(100)   NOT NULL,
+);
